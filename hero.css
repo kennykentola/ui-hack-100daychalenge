@@ -11,7 +11,7 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Navbar (reuse from previous day) */
+/* NAVBAR */
 .navbar {
   width: 100%;
   background: white;
@@ -20,6 +20,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .brand {
@@ -36,13 +39,14 @@
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  transition: all 0.3s ease;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
@@ -64,7 +68,16 @@
   transform: translateY(-2px);
 }
 
-/* Hero Section */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
 .hero {
   display: flex;
   align-items: center;
@@ -112,22 +125,12 @@
   transform: translateY(-3px);
 }
 
-/* Hero Image */
 .hero-image img {
   width: 400px;
   animation: floatUp 3s ease-in-out infinite alternate;
 }
 
-/* Hamburger menu (hidden on desktop) */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-}
-/* Animations */
+/* ANIMATIONS */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -150,8 +153,37 @@
   }
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width:768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow);
+  }
+  
+  .nav-links.active {
+    max-height: 300px;
+    padding: 1.5rem 0;
+  }
+  
+  .cta-btn {
+    display: none;
+  }
+  
   .hero {
     flex-direction: column;
     text-align: center;
@@ -162,13 +194,4 @@
     width: 250px;
     margin-top: 2rem;
   }
-  
-  .menu-toggle {
-    display: block;
-  }
-  
-  .cta-btn {
-    display: none;
-  }
 }
-
