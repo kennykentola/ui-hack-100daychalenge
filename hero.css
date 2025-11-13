@@ -1,0 +1,156 @@
+:root {
+  --background-color: #f5e8fa;
+  --accent-color: #c071c5;
+  --shadow: #cec4d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Navbar (reuse from previous day) */
+.navbar {
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 10px var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.brand span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+.cta-btn {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background: #a85cb0;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5e8fa 40%, #c071c5 100%);
+  min-height: 90vh;
+  color: #333;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 500px;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #2d033b;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--accent-color);
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 400px;
+  animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(10px);
+  }
+  
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width:768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-image img {
+    width: 250px;
+    margin-top: 2rem;
+  }
+}
