@@ -118,6 +118,15 @@
   animation: floatUp 3s ease-in-out infinite alternate;
 }
 
+/* Hamburger menu (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
 /* Animations */
 @keyframes slideInLeft {
   from {
@@ -153,4 +162,13 @@
     width: 250px;
     margin-top: 2rem;
   }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .cta-btn {
+    display: none;
+  }
 }
+
