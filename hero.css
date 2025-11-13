@@ -68,13 +68,39 @@
   transform: translateY(-2px);
 }
 
+/* PURE CSS HAMBURGER */
 .menu-toggle {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
   background: none;
   border: none;
-  font-size: 1.6rem;
-  color: #333;
   cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Transform bars into X when open */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
 /* HERO SECTION */
@@ -156,7 +182,7 @@
 /* RESPONSIVE */
 @media (max-width:768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
   
   .nav-links {

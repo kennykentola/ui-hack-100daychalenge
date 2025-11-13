@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Day 4 – Hero Section | Hackaholics UI 100days</title>
   <link rel="stylesheet" href="hero.css" />
-  <script src="https://kit.fontawesome.com/a2e0c6e1c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="brand">Hackaholics<span>UI</span></div>
 
+    <!-- CSS hamburger -->
     <button class="menu-toggle" id="menu-toggle">
-      <i class="fas fa-bars"></i>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
 
     <ul class="nav-links" id="nav-links">
@@ -42,13 +44,10 @@
   <script>
     const toggle = document.getElementById('menu-toggle');
     const links = document.getElementById('nav-links');
-    const icon = toggle.querySelector('i');
 
     toggle.addEventListener('click', () => {
       links.classList.toggle('active');
-      // Toggle icon between bars and close (X)
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
+      toggle.classList.toggle('open');
     });
   </script>
 </body>
