@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Hackaholics UI 100day</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email" required />
+        <i class="fa-solid fa-circle-check icon-right valid" style="display:none;"></i>
+        <i class="fa-solid fa-circle-exclamation icon-right invalid" style="display:none;"></i>
+        <div class="msg" id="msg-email"></div>
+      </div>
+
+      <div class="form-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" required />
+        <i class="fa-solid fa-circle-check icon-right valid" style="display:none;"></i>
+        <i class="fa-solid fa-circle-exclamation icon-right invalid" style="display:none;"></i>
+        <div class="msg" id="msg-password"></div>
+      </div>
+
+      <div class="text-link" style="text-align: right; margin-top: -0.3rem;">
+        <a href="#" style="font-size:0.85rem;">Forgot password?</a>
+      </div>
+
+      <button type="submit">LOGIN</button>
+
+      <div class="text-link">
+        Don’t have an account? <a href="signup.html">Sign Up</a>
+      </div>
+
+      <div class="divider">Or Sign Up Using 👇</div>
+
+      <div class="social-buttons">
+        <button type="button" class="social-fb"><i class="fa-brands fa-facebook-f"></i></button>
+        <button type="button" class="social-tw"><i class="fa-brands fa-twitter"></i></button>
+        <button type="button" class="social-gl"><i class="fa-brands fa-google"></i></button>
+      </div>
+    </form>
+  </div>
+
+   <ul>
+        <li><a href="hero.html">← Previous</a></li>
+        <li> <a href="navbar.html">Next →</a></li>
+    </ul>
+  <script>
+    const form = document.getElementById('loginForm');
+
+    const validate = {
+      email: () => {
+        const ok = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(form.email.value);
+        update(form.email, ok, ok ? '' : 'Enter a valid email');
+        return ok;
+      },
+      password: () => {
+        const val = form.password.value.trim();
+        const ok = val.length >= 8;
+        update(form.password, ok, ok ? '' : 'Password must be at least 8 characters');
+        return ok;
+      }
+    };
+
+    function update(input, valid, msg) {
+      const parent = input.parentElement;
+      parent.querySelector('.valid').style.display = valid ? 'inline' : 'none';
+      parent.querySelector('.invalid').style.display = valid ? 'none' : 'inline';
+      parent.querySelector('.msg').textContent = msg;
+    }
+
+    Object.keys(validate).forEach(k => form[k].addEventListener('input', validate[k]));
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (Object.values(validate).every(fn => fn())) {
+        alert('Login successful!');
+      }
+    });
+  </script>
+</body>
+</html>

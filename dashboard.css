@@ -1,0 +1,141 @@
+:root {
+  --background-color: #f5e8fa;
+  --accent-color: #c071c5;
+  --shadow: #cec4d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Layout */
+body {
+  display: flex;
+  background: var(--background-color);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background: #fff;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 10px var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu li {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.menu li:hover,
+  .menu li.active {
+  background: var(--accent-color);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Area */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--shadow);
+  border-radius: 25px;
+  outline: none;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px var(--shadow);
+}
+
+.card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width:768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .menu {
+    flex-direction: row;
+  }
+  
+  .main {
+    padding: 1rem;
+  }
+  
+  .menu li.active {
+    margin-left: 10px;
+  }
+}

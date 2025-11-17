@@ -1,0 +1,84 @@
+:root {
+  --background-color: #f5e8fa;
+  --accent-color: #c071c5;
+  --shadow: #cec4d3;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--background-color);
+  padding: 2rem;
+}
+
+.hero-home {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.hero-home h1 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+}
+
+.hero-home p {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.days-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.days-list h2 {
+  margin-bottom: 1rem;
+  color: #2d033b;
+}
+
+.days-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.days-list li {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.days-list a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.days-list a:hover {
+  color: #2d033b;
+}
+
+.days-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 4px 10px var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.days-nav a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.days-nav a:hover {
+  color: #2d033b;
+}

@@ -62,6 +62,24 @@ Smooth hover effects
 
 Consistent color theme
 
+Day 6 – Simple Dashboard Overview
+
+Dashboard layout with responsive structure
+
+Sidebar navigation with active states
+
+Top header bar containing search + profile section
+
+4 statistic cards (Users, Revenue, Sales, Messages)
+
+Hover animation + subtle shadow lift
+
+Clean grid layout using CSS Grid + Flexbox
+
+Fully responsive for mobile and tablet
+
+Matches the global purple theme (#f5e8fa, #c071c5)
+
 📦 Installation & Setup
 1. Clone the repository
 git clone https://github.com/kennykentola/ui-hack-100daychalenge.git
