@@ -120,8 +120,14 @@ ui-hack-100daychalenge/
 │
 ├── index.html
 ├── signup.html
+│
+├── portfolio.html
+├── portfolio.css
+│
 ├── style.css
 │
+├── dashboard.html
+├── dashboard.css
 └── README.md
 
 🛠 Technologies Used
