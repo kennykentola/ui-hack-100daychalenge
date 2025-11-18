@@ -80,6 +80,22 @@ Fully responsive for mobile and tablet
 
 Matches the global purple theme (#f5e8fa, #c071c5)
 
+Day 7 – Portfolio Intro Section
+
+A clean and modern portfolio introduction section featuring:
+
+Profile image on the left
+
+Developer name & title
+
+Short bio inside a beautiful card box
+
+“Hire Me” call-to-action button
+
+Light/Dark mode toggle
+
+Responsive layout (image on top in mobile view)
+
 📦 Installation & Setup
 1. Clone the repository
 git clone https://github.com/kennykentola/ui-hack-100daychalenge.git

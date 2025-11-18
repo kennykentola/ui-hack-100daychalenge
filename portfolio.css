@@ -1,0 +1,183 @@
+:root {
+  --background-color: #f5e8fa;
+  --text-color: #333;
+  --accent-color: #c071c5;
+  --shadow: #cec4d3;
+  --navbar-text: #333;
+}
+
+/* DARK THEME */
+body.dark {
+  --background-color: #2b2b2b;
+  --text-color: #f1f1f1;
+  --accent-color: #d28ae0;
+  --shadow: #1d1d1d;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background: white;
+  color: var(--navbar-text);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--navbar-text);
+}
+
+.brand span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--navbar-text);
+  /* color: var(--text-color); */
+}
+
+.theme-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: var(--navbar-text);
+  transition: 0.3s;
+}
+
+
+/* LAYOUT */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  gap: 80px;
+}
+
+/* IMAGE FRAME ANIMATION */
+.image-frame {
+  padding: 8px;
+  border-radius: 18px;
+  display: inline-block;
+  animation: borderGlow 4s infinite alternate;
+}
+
+.image-frame img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+/* BORDER COLOR CYCLE ANIMATION */
+@keyframes borderGlow {
+  0% {
+    border: 6px solid #f81a25;
+  }
+  
+  50% {
+    border: 6px solid #c071c5;
+  }
+  
+  75% {
+    border: 6px solid #f1f1f1;
+  }
+  
+  100% {
+    border: 6px solid #cec4d3;
+  }
+}
+
+/* BIO TEXT */
+.intro-right h1 {
+  font-size: 2.6rem;
+  margin-bottom: 5px;
+}
+
+.intro-right h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.hire-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:850px) {
+  .intro {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 10px;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+}

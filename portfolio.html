@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 7 – Portfolio Intro | Hackaholics UI</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="brand">Hackaholics<span>UI</span></div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+
+    <!-- Theme Toggle -->
+    <button class="theme-btn" id="theme-toggle">🌙</button>
+
+    <button class="menu-toggle" id="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- PORTFOLIO INTRO -->
+  <section class="intro">
+
+    <!-- LEFT: IMAGE -->
+    <div class="intro-left">
+      <div class="image-frame">
+        <img src="/images/kenny.png" alt="KennyKentola Profile">
+      </div>
+    </div>
+
+    <!-- RIGHT: BIO -->
+    <div class="intro-right">
+      <h1>Kennykentola</h1>
+      <h3>Full-Stack Developer</h3>
+
+      <p>
+        Hi, I Am <strong>Kennykentola!</strong> 👋<br>
+        I Am a passionate Full-Stack Developer specializing in 
+        <strong>Html, Css, React, Node.js, and Python</strong>.  
+        I love building scalable applications with efficient front-end 
+        and back-end architecture.  
+        I thrive on solving complex problems with innovative solutions.
+      </p>
+
+      <a href="#" class="hire-btn">Hire Me</a>
+    </div>
+
+  </section>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+
+    // THEME SWITCH
+    const themeBtn = document.getElementById("theme-toggle");
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+
+</body>
+</html>
