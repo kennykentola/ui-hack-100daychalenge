@@ -95,6 +95,32 @@ Short bio inside a beautiful card box
 Light/Dark mode toggle
 
 Responsive layout (image on top in mobile view)
+Day 8: Modern Landing Page Hero + Navbar
+Day 8 – Modern Landing Page Hero + Navbar
+📌 Features Completed
+
+Fully responsive navbar with desktop + mobile layout
+
+Mobile hamburger toggle with animated X
+
+Sticky navbar that transitions through 3 scroll levels
+
+Gradient hero section with headline, subtext and CTA
+
+Floating CSS animated illustration
+
+Scroll reveal animations
+
+Clean color system using CSS variables
+
+Mobile optimization + spacing fixes
+Color Palette
+Name	Hex
+Primary	#2563EB
+Secondary	#1E293B
+Accent	#F59E0B
+Text	#111827
+Background	#F9FAFB
 
 📦 Installation & Setup
 1. Clone the repository
@@ -123,6 +149,11 @@ ui-hack-100daychalenge/
 │
 ├── portfolio.html
 ├── portfolio.css
+│
+│
+├── landing8.html
+├── landing8.css
+├── landing8.js
 │
 ├── style.css
 │

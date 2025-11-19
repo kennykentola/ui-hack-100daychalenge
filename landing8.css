@@ -1,0 +1,278 @@
+:root {
+  --primary: #2563EB;
+  --secondary: #1E293B;
+  --accent: #F59E0B;
+  --text: #111827;
+  --background: #F9FAFB;
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.scrolled {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  z-index: 1000;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.cta-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #1d4ed8;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--secondary);
+  transition: 0.3s;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 120px 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  gap: 50px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.9rem;
+  margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+.hero-btn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FLOATING HERO ILLUSTRATION */
+.illustration {
+  width: 260px;
+  height: 260px;
+  position: relative;
+}
+
+/* Floating circles */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0.5px);
+  animation: float 4s infinite ease-in-out alternate;
+}
+
+.s1 {
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 10px;
+  background: radial-gradient(circle, #f59e0b, #f59e0bbb);
+  animation-duration: 5s;
+}
+
+.s2 {
+  width: 60px;
+  height: 60px;
+  top: 50px;
+  left: 0;
+  background: radial-gradient(circle, #22c55e, #22c55e99);
+  animation-duration: 6s;
+}
+
+.s3 {
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 40px;
+  background: radial-gradient(circle, #2563eb, #2563eb88);
+  animation-duration: 4s;
+}
+
+.bar {
+  width: 60px;
+  height: 140px;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #2563eb, #1e40af);
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px #00000022;
+  animation: pulse 3s infinite ease-in-out alternate;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  
+  100% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  
+  100% {
+    transform: translateX(-50%) scale(1.07);
+  }
+}
+
+/* HAMBURGER X ANIMATION */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* SCROLL ANIMATION */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAVBAR LEVELS */
+.navbar.level1 {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+}
+
+.navbar.level2 {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+}
+
+.navbar.level3 {
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+}
+
+/* MOBILE */
+@media (max-width:850px) {
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .navbar {
+    padding: 15px 25px;
+  }
+  
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-img img {
+    width: 300px;
+  }
+}
