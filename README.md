@@ -95,6 +95,7 @@ Short bio inside a beautiful card box
 Light/Dark mode toggle
 
 Responsive layout (image on top in mobile view)
+
 Day 8: Modern Landing Page Hero + Navbar
 Day 8 – Modern Landing Page Hero + Navbar
 📌 Features Completed

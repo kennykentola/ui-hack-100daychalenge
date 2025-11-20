@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="blog.css">
+        <link rel="icon" href="#" type="image/x-icon">
+        <title>Day 9 | blog Page | Hackaholics UI</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="brand">Hackaholics<span>UI</span></h1>
+            <!-- <h1> <span>Richard</span>.</h1> -->
+            <nav class="navbar hide-on-mobile">
+                <ul>
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <ul class="contact-btn hide-on-mobile">
+                <li><a href="#">Contact me</a></li>
+            </ul>
+            <div class="menu-btn" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sidebar" id="sidebar">
+                <ul>
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="blog-section">
+            <h1>Blog</h1>
+            <div class="blog-roll">
+                <div class="blog-post">
+                    <img src="res/blog-img-1.jpg">
+                    <span>
+                        <p>woli agba</p>
+                        <p>dec. 20, 2025</p>
+                    </span>
+                    <h2>Learnt Python, I Know Syntax, Now What?</h2>
+                    <p>So, you've conquered Python's syntax. You can write for loops, define functions, and maybe even whip up a qick list comprehension without breaking a sweat. That's a huge milestone, but it's also where many learners hit a wall. The truth is, knowing syntax is like learning the alphabeth. It is essential, but only the beginning of becomming fluent...</p>
+                    <a href="#">read more...</a>
+                </div>
+                <div class="blog-post">
+                    <img src="res/blog-img-2.jpg">
+                    <span>
+                        <p>Mishka Romanov</p>
+                        <p>oct. 15, 2025</p>
+                    </span>
+                    <h2>An Intro To Web Development In Python</h2>
+                    <p>Python has become one of the most popular programming languages for web development, thanks to its simplicity, readability, and powerful ecosystem. Whether you're building a personal blog, a data-driven dashboard, or a full-fledged e-commerce platform, python offers tools and frameworks that make web development efficient and enjoyable.</p>
+                    <a href="#">read more...</a>
+                </div>
+                <div class="blog-post">
+                        <img src="res/blog-img-3.png">
+                        <span>
+                            <p>otega Richard</p>
+                            <p>feb. 20, 2025</p>
+                        </span>
+                        <h2>How Do You connect And Network In Your Field?</h2>
+                        <p>Whether you are pursuing a career in tech, are an enthusiast or just getting into the field, connection and collaboration is an essential part of personal and professional growth. Connecting with others in your field is beneficial and can give you insight into industry trends, new and more efficient ways to do what you do and even employment/internship oppurtunities...</p>
+                        <a href="#">read more...</a>
+                </div>
+            </div>
+        </section>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const sideBar = document.getElementById('sidebar');
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                sideBar.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>

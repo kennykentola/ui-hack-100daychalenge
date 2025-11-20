@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 – Blog Card Grid</title>
+  <link rel="stylesheet" href="blog9.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="brand">Hackaholics<span>UI</span></div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button id="themeToggle">🌙</button>
+      <div class="menu-btn" id="menuBtn">☰</div>
+    </div>
+  </nav>
+
+  
+  <section class="blog-section">
+    <h2 class="section-title">Latest Blog Posts</h2>
+
+    <div class="blog-grid">
+
+      <!-- CARD 1 -->
+      <div class="blog-card fade-in">
+        <div class="tag uiux">UI/UX</div>
+        <img src="images/blog1.png" alt="Blog 1">
+        <div class="content">
+          <h3>Sleek UI Principles for Modern Web Apps</h3>
+          <p>Learn how to design clean, user-friendly interfaces that improve usability and flow.</p>
+          <div class="meta">By Kenny • Jan 13, 2025</div>
+          <a class="read-btn" href="#">Read More</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="blog-card fade-in">
+        <div class="tag javascript">JavaScript / React</div>
+        <img src="images/blog2.png" alt="Blog 2">
+        <div class="content">
+          <h3>React Patterns for Faster Development</h3>
+          <p>Explore reusable patterns and tricks that help you build scalable React apps.</p>
+          <div class="meta">By Kenny • Jan 11, 2025</div>
+          <a class="read-btn" href="#">Read More</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="blog-card fade-in">
+        <div class="tag python">Python</div>
+        <img src="images/blog3.png" alt="Blog 3">
+        <div class="content">
+          <h3>Building REST APIs with Python</h3>
+          <p>A step-by-step guide on making fast and lightweight APIs using Python frameworks.</p>
+          <div class="meta">By Kenny • Jan 7, 2025</div>
+          <a class="read-btn" href="#">Read More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">&raquo;</button>
+    </div>
+
+  </section>
+
+<script src="blog9.js"></script>
+</body>
+</html>
