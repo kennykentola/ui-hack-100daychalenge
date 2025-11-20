@@ -122,6 +122,36 @@ Secondary	#1E293B
 Accent	#F59E0B
 Text	#111827
 Background	#F9FAFB
+Day 9 – Blog Card Grid
+
+A modern, responsive blog preview grid built with CSS Grid.
+Includes 3-card layout on desktop and stacked layout on mobile.
+
+Features
+
+✔ Responsive 3-column blog grid
+
+✔ Thumbnail, title, excerpt, author & date
+
+✔ Hover animation + smooth transitions
+
+✔ Category tags (UI/UX, JavaScript/React, Python)
+
+✔ Dark mode toggle
+
+✔ Fade-in animations on scroll
+
+✔ Pagination component
+
+✔ Mobile hamburger menu
+
+Color Palette
+Role	Color
+Primary	#2C3E50
+Accent	#E67E22
+Text	#34495E
+Background	#F9FAFB
+Skill Focus
 
 📦 Installation & Setup
 1. Clone the repository
