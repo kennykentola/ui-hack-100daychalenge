@@ -31,7 +31,7 @@ body {
   padding: 15px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   box-shadow: 0 4px 10px var(--shadow);
   position: sticky;
   top: 0;
