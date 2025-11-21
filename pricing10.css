@@ -1,0 +1,299 @@
+:root {
+  --primary: #7C3AED;
+  /* Violet */
+  --accent: #F59E0B;
+  /* Gold */
+  --text: #1F2937;
+  --bg: #FAF5FF;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px #00000010;
+  z-index: 50;
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: var(--primary);
+  box-shadow: 0 2px 12px #00000025;
+}
+
+.navbar.scrolled .logo,
+.navbar.scrolled a {
+  color: white;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--primary);
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  text-decoration: none;
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #5b21b6;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.pricing-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.title {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* TOGGLE */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.save {
+  background: var(--accent);
+  color: white;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+}
+
+/* SWITCH STYLE */
+.switch {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  display: inline-block;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 34px;
+  inset: 0;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* GRID */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px #00000015;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #00000025;
+}
+
+/* PRO HIGHLIGHT */
+.pro {
+  border: 3px solid var(--primary);
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.price {
+  font-size: 2.4rem;
+  margin: 10px 0 20px;
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #5b21b6;
+}
+
+.highlight {
+  background: var(--accent);
+}
+
+.highlight:hover {
+  background: #d97706;
+}
+
+/* RESPONSIVE */
+@media (max-width:850px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pro {
+    transform: none;
+  }
+  
+  .nav-links,
+  .cta-btn {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  /* MOBILE MENU ACTIVE */
+  .nav-links.active {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px #00000020;
+  }
+  
+  .nav-links.active li a {
+    color: var(--text);
+    font-size: 1.2rem;
+  }
+}
+
+

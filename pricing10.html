@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10 – Interactive Pricing Page</title>
+  <link rel="stylesheet" href="pricing10.css">
+  <link rel="stylesheet" href="landing8.css">
+</head>
+<body>
+
+    
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">Hackaholics<span>UI</span></div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <a href="#" class="cta-btn" id="cta-btn">Get Started</a>
+
+    <button class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="pricing-section">
+
+    <h1 class="title">Simple & Flexible Pricing</h1>
+    <p class="subtitle">Choose a plan that grows with your needs.</p>
+
+    <!-- TOGGLE -->
+    <div class="toggle-container">
+      <span>Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="price-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span>Yearly <small class="save">Save 20%</small></span>
+    </div>
+
+    <!-- PRICING GRID -->
+    <div class="pricing-grid">
+
+      <!-- BASIC -->
+      <div class="card fade-in">
+        <h3>Basic</h3>
+        <p class="price" data-month="19" data-year="15">$19</p>
+        <ul>
+          <li>✔ Access to basics</li>
+          <li>✔ Email support</li>
+          <li>✔ 5 Projects</li>
+        </ul>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+
+      <!-- PRO (Highlighted) -->
+      <div class="card pro fade-in">
+        <h3>Pro</h3>
+        <p class="price" data-month="49" data-year="39">$49</p>
+        <ul>
+          <li>✔ Everything in Basic</li>
+          <li>✔ Priority Support</li>
+          <li>✔ Unlimited Projects</li>
+        </ul>
+        <a href="#" class="btn highlight">Get Pro</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="card fade-in">
+        <h3>Enterprise</h3>
+        <p class="price" data-month="99" data-year="79">$99</p>
+        <ul>
+          <li>✔ Team Access</li>
+          <li>✔ Dedicated Manager</li>
+          <li>✔ Advanced Tools</li>
+        </ul>
+        <a href="#" class="btn">Contact Sales</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="pricing10.js"></script>
+</body>
+</html>
+
