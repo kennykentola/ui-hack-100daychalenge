@@ -153,6 +153,14 @@ Text	#34495E
 Background	#F9FAFB
 Skill Focus
 
+Day 10 – Interactive Pricing Page
+📝 Project Description
+
+Day 10 features a fully interactive 3-tier pricing page built with HTML, CSS, and JavaScript.
+The pricing cards switch between Monthly and Yearly using a toggle, and the middle “Pro” plan is highlighted as the recommended option.
+
+The layout includes soft animations, hover effects, and responsive behavior to provide a smooth and modern UI experience.
+
 📦 Installation & Setup
 1. Clone the repository
 git clone https://github.com/kennykentola/ui-hack-100daychalenge.git
